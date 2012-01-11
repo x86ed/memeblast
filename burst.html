@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=1000px">
+    <title>burst</title>
+    <meta name="description" content="A site full of image-making and CSS-building tools to help you make smart websites really quickly." />
+  </head>
+  <body>
+    <div class="bar" id="top_bar">
+      <div class="row_12">
+        <div class="cell_8 outset vertical_inset" id="logo">
+          <img src="/media/img/logo.png">
+          <span>tools for making smart websites really quickly</span>
+        </div>
+        <div class="cell_1 outset nav">
+          <a href="/">Home</a>
+        </div>
+        <div class="cell_1 outset nav">
+          <a href="/info/img/placeholders/">Tools</a>
+        </div>
+        <div class="cell_1 outset nav">
+          <a href="/info/project/">Info</a>
+        </div>
+        <div class="cell_1 outset nav">
+          <a href="/info/join/">Join</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="bar" id="content_bar">
+      <div class="page">
+        <div class="page_shadow">
+          
+<div class="row_12" id="sidebar_content">
+  <div class="cell_2 flush vertical_inset" id="sidebar">
+    <h3>La Carte</h3>
+
+    <h5>Images</h5>
+    <ul class="sidebar_nav">
+      <li><a href="/info/img/placeholders/">Placeholders</a></li>
+      <li><a href="/info/img/layout-grid/">Layout Grid</a></li>
+    </ul>
+    <ul class="sidebar_nav">
+      <li><a href="/info/img/faux-columns/">Faux Columns</a></li>
+      <li><a href="/info/img/page-shadow/">Page Shadow</a></li>
+      <li><a href="/info/img/gradient/">Gradient</a></li>
+    </ul>
+    <ul class="sidebar_nav last">
+      <li><a href="/info/img/corner-ribbons/">Corner Ribbons</a></li>
+      <li><a href="/info/img/stars/">Stars</a></li>
+      <li><a href="/info/img/stickers/">Stickers</a></li>
+      <li><a href="/info/img/sunburst/">Sunburst</a></li>
+      <li><a href="/info/img/reflection/">Image Reflection</a></li>
+    </ul>
+
+    <h5>CSS</h5>
+    <ul class="sidebar_nav last">
+      <li><a href="/info/css/grid-system/">Grid System</a></li>
+      <li><a href="/info/css/typography/">Typography</a></li>
+    </ul>
+
+    <h5>Backstory</h5>
+    <ul class="sidebar_nav last">
+      <li><a href="/info/project/">The Project</a></li>
+      <li><a href="/info/join/">Join In</a></li>
+      <li><a href="/info/tos/">Terms of Use</a></li>
+    </ul>
+  </div>
+  <div class="cell_10 flush vertical_inset">
+    
+    <h1>Sunburst</h1>
+
+
+    <canvas id="output">
+      <div class="nocanvas">
+        <h2>HTML5 Canvas</h2>
+        <p>
+          This tool creates its images using
+          the <code>&lt;canvas&gt;</code> element from HTML
+          5. Unfortunately, your browser currently doesn't support this
+          latest version of HTML.
+        </p>
+        <p>
+          You can upgrade your browser to a modern
+          browser such as the latest versions
+          of <a href="http://www.mozilla.org/firefox/">Firefox</a>,
+          <a href="http://www.google.com/chrome">Google Chrome</a>,
+          <a href="http://www.apple.com/safari/">Safari</a>,
+          or <a href="http://www.opera.com/">Opera</a>. Because of the
+          way Microsoft responds to emerging standards, Internet
+          Explorer is usually a couple of years behind these
+          others. Canvas support is included in Internet Explorer 9.
+        </p>
+        <p>
+          Please note that any images you create with this tool will work
+          on all browsers, including those without HTML5 support.
+        </p>
+      </div>
+    </canvas>
+    <p>
+      <a id="result" class="download" href="">
+        Click here to see the full image, or right click and
+        select "Save this link"  to download
+      </a>
+    </p>
+
+
+    <form id="controls">
+
+      <div>
+        <label for="width">Image size:</label>
+        <input type="text" name="width" id="width" value="200" class="size"> x
+        <input type="text" name="height" id="height" value="300" class="size">
+      </div>
+      <div>
+        <label for="burstX">Burst origin:</label>
+        <input type="text" name="burstX" id="burstX" value="100" class="size">
+        x
+        <input type="text" name="burstY" id="burstY" value="220" class="size">
+        <p class="info">
+          You can also click on the image above to set these values.
+        </p>
+      </div>
+      <div>
+        <label for="background">Background color:</label>
+        <input type="text" name="background" id="background" value="#559933"
+               class="color">
+      </div>
+      <div>
+        <label for="center">Sunburst center color:</label>
+        <input type="text" name="center" id="center" value="#66aa33"
+               class="color">
+      </div>
+      <div>
+        <label for="tip">Sunburst tip color:</label>
+        <input type="text" name="tip" id="tip" value="#99cc33" class="color">
+      </div>
+      <div>
+        <label for="points">Sunburst points:</label>
+        <input type="text" name="points" id="points" value="60" class="size">
+      </div>
+
+      <div>
+        <label for="copyright">Copyright message:</label>
+        <input disabled type="text"
+               name="copyright" id="copyright" class="text"
+               value="oojits.com"/>
+        <p class="info">
+          Leave this blank to remove the copyright message.
+          You can modify this if you've <a href="/info/join/">joined</a>. Or
+          alternatively you can <a href="/info/hack/">hack</a> the page.
+        </p>
+      </div>
+      <div>
+        <label>&nbsp;</label><input type="submit" value="Create">
+      </div>
+    </form>
+
+<h2>Documentation</h2>
+
+<p>
+This image generator produces a two-tone starburst effect that is
+a popular background for page elements that need to draw the eye.
+</p>
+
+<p>
+Fill out the form above, click 'create' then right click the blue
+button to download your image.
+</p>
+
+<p>
+The dimenions of the image are in pixels, and the burst origin is
+relative to the top left of the image (increasing down and to the
+right). If you want the origin to be on the image, you can click on
+the image above. You can set values outside the image bounds using the
+form.
+</p>
+
+<p>
+The color specifications can be anything that CSS can
+understand, so you can use X11 color names (e.g. <em>white</em>
+or <em>goldenrod</em>); 3 digit or 6 digit hex colors, prefixed by a
+hash (e.g. <em>#369</em> or <em>#f9f8f7</em>); and rgb or rgba
+specifications (e.g. <em>rgb(255,0,0)</em>
+or <em>rgba(255,0,0,0.4)</em>). Note that when using rgb and rgba
+values, the first three parameters are integers from 0-255, while for
+rgba the last parameter is an opacity from 0-1.
+</p>
+
+<p>
+The sunburst color is a gradient from the inside of the burst to
+the <em>second nearest corner</em>. This may seem an odd or arbitrary
+choice, but is probably what you actually need. If it isn't, then I'm
+sorry. There are so many possible combinations, you may have to
+generate your own image.
+</p>
+
+<p>
+The copyright message/watermark can be removed or changed if you
+have <a href="/info/join/">joined</a>. If you desperately need to use
+this tool, but are too cheapskate to donate <em>anything</em> to a
+good cause, then see the instructions
+for <a href="/info/hack/">hacking</a> the code to get rid of it.
+</p>
+
+
+  </div>
+</div>
+
+        </div>
+        <img class="shadow" src="/media/img/page-bottom.png">
+      </div>
+    </div>
+
+    <div class="row_12" id="legal">
+      <div class="cell_12 vertical_inset">
+        <p>&copy; 2010 IDM. See the <a href="/info/tos/">TOS</a>.</p>
+      </div>
+    </div>
+
+    <div style="display: block; position: absolute; top: 0; left: 0">
+      <map name="tenpercent">
+        <area shape="poly" coords="0,0,120,0,0,120" href="/info/project/"
+              alt="A ten percent better project">
+      </map>
+      <img style="border: 0" usemap="#tenpercent"
+           src="/media/img/tenpercent.png" alt="A 10% Better Project">
+    </div>
+
+    <script type="text/javascript"
+     src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js">
+    </script>
+    <script type="text/javascript">
+      $(function() {
+          $("a[href="+window.location.pathname+"]").addClass("current");
+      });
+    </script>
+    <script type="text/javascript" src="/media/js/canvas-utils.js"></script>
+
+    <script type="text/javascript">
+    (function() {
+        var createCanvas = function() {
+            var controls = $("#controls");
+            var canvas = $("#output").get(0);
+            var c = canvas.getContext('2d');
+
+            // Find the size.
+            var w = validate.size("width", controls, 0, 5000);
+            var h = validate.size("height", controls, 0, 5000);
+            var points = validate.size("points", controls, 3, 1000);
+            var burstX = validate.size("burstX", controls, -5000, 10000);
+            var burstY = validate.size("burstY", controls, -5000, 10000);
+            var bg = validate.color("background", controls);
+            var center = validate.color("center", controls);
+            var tip = validate.color("tip", controls);
+            var copyright = $("#copyright", controls).val();
+            if (w === null || h === null || points === null ||
+                burstX === null || burstY === null || center === null ||
+                tip === null || bg === null) {
+                return;
+            }
+
+            // Set the size.
+            $(canvas).attr("width", w);
+            $(canvas).attr("height", h);
+
+            // Set global configuration
+            c.textAlign = "center";
+            c.textBaseline = "bottom";
+
+            // Fill the background
+            c.fillStyle = bg;
+            c.fillRect(0, 0, w, h);
+
+            // Add the burst
+            var d = function(x, y) {
+                x -= burstX; y -= burstY;
+                return Math.sqrt(x*x+y*y);
+            };
+            var ds = [d(0,0), d(w,0), d(w,h), d(0,h)];
+            ds.sort(function(a,b) { return a-b; })
+
+            var gradient = c.createRadialGradient(
+                burstX, burstY, 0, burstX, burstY, ds[1]
+            );
+            gradient.addColorStop(0, center);
+            gradient.addColorStop(1, tip);
+            c.fillStyle = gradient;
+
+            var r = ds[3];
+            c.beginPath();
+            var perPoint = Math.PI/points
+            var theta = perPoint*0.5;
+            for (var i = 0; i < points; i++) {
+                c.moveTo(burstX, burstY);
+                c.lineTo(burstX+Math.sin(theta)*r, burstY+Math.cos(theta)*r);
+                theta += perPoint;
+                c.lineTo(burstX+Math.sin(theta)*r, burstY+Math.cos(theta)*r);
+                c.closePath();
+                theta += perPoint;
+            }
+            c.fill();
+
+            // Add the copyright
+            footerCopyright(c, w, h, copyright);
+
+            // Save the result
+            $("#result").attr("href", canvas.toDataURL());
+        };
+
+        $(function() {
+            createCanvas();
+            $("#controls").submit(function(event) {
+                event.preventDefault();
+                event.stopPropagation();
+                createCanvas();
+                return false;
+            });
+            $("#output").click(function(event) {
+                var canvasPos = $("#output").offset();
+                var controls = $("#controls");
+                                console.info(event);
+                $("#burstX", controls).val(event.pageX - canvasPos.left);
+                $("#burstY", controls).val(event.pageY - canvasPos.top);
+                controls.submit();
+            });
+        });
+    })();
+    </script>
+
+
+    <script type="text/javascript">var _gaq=_gaq||[];_gaq.push(['_setAccount','UA-446844-15']);_gaq.push(['_trackPageview']);(function(){var ga=document.createElement('script');ga.type='text/javascript';ga.async=true;ga.src=('https:'==document.location.protocol?'https://ssl':'http://www')+'.google-analytics.com/ga.js';var s=document.getElementsByTagName('script')[0];s.parentNode.insertBefore(ga,s);})();</script>
+  </body>
+</html>

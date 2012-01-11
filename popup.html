@@ -1,15 +1,64 @@
 <!DOCTYPE html5>
 
 <head>
-<link href='http://fonts.googleapis.com/css?family=VT323' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Geo' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" type="text/css" href="css/popup.css">
+<link rel="stylesheet" type="text/css" href="css/jquery-ui-1.8.16.custom.css">
 <script src="js/jquery-1.7.1.min.js" type="text/javascript"></script>
 <script src="js/jquery-ui-1.8.11.custom.min.js" type="text/javascript"></script>
 <script src="js/popup.js" type="text/javascript"></script>
 </head>
-
 <body>
+<ul class="mb-tabs js-mb-mutable">
+<li class="mb-tab selected" rel="#mb-homeTab">encode</li><li class="mb-tab mb-imgTab" rel="#mb-imgTab">image</li><li class="mb-tab" rel="#mb-hashTab">hash</li>
+</ul>
+<div class="mb-tabBody" id="mb-homeTab">
+<div class="mb-left js-orange">
+  <div class="mb-wordBubble">
+    <label for="mb-string">ASCII 
+      <!--<span class="mb-button mb-clip" id="mb-clipStr" rel="mb-string"><span></span></span>--> 
+      <span class="mb-button"><span class=" mb-maximize" rel="mb-string"></span></span>
+    </label>
+    <textarea id="mb-string" rel="99" rows="6"></textarea>
+    <label for="mb-hex">Hex<span class="mb-button"><span class="mb-maximize" rel="mb-hex"></span></span></label>
+    <textarea id="mb-hex" rel="16" rows="6"></textarea>
+    <label for="mb-dec">Decimal<span class="mb-button"><span class="mb-maximize" rel="mb-dec"></span></span></label>
+    <textarea id="mb-dec" rel="10" rows="6"></textarea>
+    <label for="mb-binary">binary<span class="mb-button"><span class="mb-maximize" rel="mb-binary"></span></span></label>
+    <textarea id="mb-binary" rel="2" rows="6"></textarea>
+  </div>
+</div>
+<div class="mb-right js-orange">
+  <div class="mb-wordBubble">
+    <label for="mb-base64">Base64<span class="mb-button"><span class="mb-maximize" rel="mb-base64"></span></span></label>
+    <textarea id="mb-base64" rel="64" rows="6"></textarea>
+    <label for="mb-url">URI encoded<span class="mb-button"><span class="mb-maximize" rel="mb-url"></span></span></label>
+    <textarea id="mb-url" rel="80" rows="6"></textarea>
+    <label for="mb-urlC">URI Component<span class="mb-button"><span class="mb-maximize" rel="mb-urlC"></span></span></label>
+    <textarea id="mb-urlC" rel="443" rows="6"></textarea>
+  </div>
+</div>
+</div>
+<div class="mb-tabBody mb-bottomPad js-orange" id="mb-imgTab">
+        <div class="mb-imageBox js-mb-mutable" ><img class="mb-imageOutput" alt="base64 output" /></div>
+  <label for="mb-base64Img" class="js-mb-mutable">Base64 tag<span class="mb-button"><span class="mb-maximize" rel="mb-base64Img"></span></span></label>
+  <textarea id="mb-base64Img" class="js-mb-mutable" rel="641" rows="6"></textarea>
+</div>
+<div class="mb-tabBody mb-bottomPad js-orange" id="mb-hashTab">
+    <div class="js-mb-mutable">
+          <label for="mb-md5">md5<span class="mb-button"><span class="mb-maximize" rel="mb-md5"></span></span></label>
+    <textarea id="mb-md5" rel="555" rows="3"></textarea>
+    <label for="mb-sha1">sha-1<span class="mb-button"><span class="mb-maximize" rel="mb-sha1"></span></span></label>
+    <textarea id="mb-sha1" rel="111" rows="3"></textarea>
+    <label for="mb-sha256">sha-256<span class="mb-button"><span class="mb-maximize" rel="mb-sha256"></span></span></label>
+    <textarea id="mb-sha256" rel="256" rows="3"></textarea>
+    <label for="mb-sha512">sha-512<span class="mb-button"><span class="mb-maximize" rel="mb-sha512"></span></span></label>
+    <textarea id="mb-sha512" rel="512" rows="3"></textarea>
+    <label for="mb-crc32">crc32<span class="mb-button"><span class="mb-maximize" rel="mb-crc32"></span></span></label>
+    <textarea id="mb-crc32" rel="320" rows="3"></textarea>
+    <label for="mb-md160">ripe md160<span class="mb-button"><span class="mb-maximize" rel="mb-md160"></span></span></label>
+    <textarea id="mb-md160" rel="160" rows="3"></textarea>
+  </div>
 </div>
 </body>
 </html>
