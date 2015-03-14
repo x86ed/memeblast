@@ -1,0 +1,1 @@
+Oh hai. I herd u liek memes. This app allows u 2 search, send and create lulzy content that you can then blast to over 9000 of your friends for great justice.
